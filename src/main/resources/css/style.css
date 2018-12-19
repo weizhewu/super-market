@@ -2,3 +2,22 @@
     -fx-text-fill: rgb(0, 163, 255);
     -fx-font-size: 36px;
 }
+
+.white-word{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 18px;
+}
+
+.blue-word{
+    -fx-text-fill: rgb(0, 163, 255);
+    -fx-font-size: 18px;
+}
+
+.blue-background{
+    -fx-background-color: rgb(192, 229, 242);
+}
+
+.orange-button{
+    -fx-background-color: rgb(246, 149, 129);
+    -fx-background-radius: 20px;
+}
