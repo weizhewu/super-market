@@ -1,4 +1,4 @@
-package com.soft1841.sm;
+package com.soft1841.sm.utils;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
