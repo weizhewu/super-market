@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane
+        fx:controller="com.soft1841.sm.controller.Controller"
+        maxHeight="-Infinity"
+        maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+        prefHeight="524.0" prefWidth="595.0"
+        xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="86.0" layoutY="185.0" text="用户类型" />
+        <Label layoutX="94.0" layoutY="243.0" text="用户名" />
+        <Label layoutX="101.0" layoutY="307.0" text="密码" />
+        <Accordion layoutX="276.0" layoutY="160.0" />
+        <ComboBox layoutX="198.0" layoutY="180.0" prefWidth="150.0" promptText="收银员" />
+        <TextField layoutX="199.0" layoutY="238.0" />
+        <TextField layoutX="199.0" layoutY="312.0" />
+        <Label layoutX="447.0" layoutY="317.0" text="忘记密码？" textFill="#3f36a8" />
+        <Button layoutX="146.0" layoutY="393.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="66.0" text="登录" />
+        <Button layoutX="300.0" layoutY="393.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="66.0" text="退出" />
+        <ImageView fitHeight="145.0" fitWidth="589.0" layoutX="4.0" layoutY="2.0">
+            <image>
+                <Image url="/img/chaoshi.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="212.0" layoutY="75.0" text="超市登录系统">
+            <font>
+                <Font size="32.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
