@@ -1,4 +1,4 @@
-package com.soft1841.sm.entity;
+package com.soft1841.sm.utils;
 
 
 import javafx.scene.control.Button;
