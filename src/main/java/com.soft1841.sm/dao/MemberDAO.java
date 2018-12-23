@@ -1,7 +1,5 @@
 package com.soft1841.sm.dao;
-
 import com.soft1841.sm.entity.Member;
-
 import java.sql.SQLException;
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.soft1841.sm.dao;
 
+import cn.hutool.db.Entity;
 import com.soft1841.sm.entity.Type;
-
 import java.sql.SQLException;
 import java.util.List;
 
@@ -30,7 +30,7 @@ public interface TypeDAO {
      * @return
      * @throws SQLException
      */
-    List<Type> selectAllTypes() throws SQLException;
+    List <Entity> selectAllTypes() throws SQLException;
 
     /**
      * 根据id查询类别
@@ -38,5 +38,5 @@ public interface TypeDAO {
      * @return
      * @throws SQLException
      */
-    Type getTypeById(int id) throws SQLException;
+    Entity getTypeById(int id) throws SQLException;
 }
