@@ -1,6 +1,7 @@
 .blue-title{
     -fx-text-fill: rgb(0, 163, 255);
     -fx-font-size: 36px;
+    -fx-font-weight: bold;
 }
 
 .white-word{
@@ -19,5 +20,13 @@
 
 .orange-button{
     -fx-background-color: rgb(246, 149, 129);
-    -fx-background-radius: 20px;
+    -fx-background-radius: 40px;
+    -fx-text-fill: #FFFFFF;
 }
+
+.blue-button{
+    -fx-background-color: rgb(0, 163, 255);
+    -fx-background-radius: 10px;
+    -fx-text-fill: #FFFFFF;
+}
+
