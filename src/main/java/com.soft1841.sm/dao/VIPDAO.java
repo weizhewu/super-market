@@ -9,12 +9,12 @@ import java.util.List;
 
 public interface VIPDAO {
     /**
-     * 增加会员
-     * @param member
+     * 增加VIP
+     * @param vip
      * @return
      * @throws SQLException
      */
-    long insertMember(VIP member) throws SQLException;
+    long insertVIP(VIP vip) throws SQLException;
 
     /**
      * 删除会员
@@ -22,14 +22,14 @@ public interface VIPDAO {
      * @return
      * @throws SQLException
      */
-    int deleteById(long id) throws SQLException;
+    int deleteVIPById(long id) throws SQLException;
 
     /**
      * 查询所有会员
      * @return
      * @throws SQLException
      */
-    List<VIP> selectMembers() throws SQLException;
+    List<VIP> selectVIP() throws SQLException;
 
     /**
      * 根据id查会员
@@ -37,5 +37,5 @@ public interface VIPDAO {
      * @return
      * @throws SQLException
      */
-    VIP getMemberById(long id) throws SQLException;
+    VIP getVIPById(long id) throws SQLException;
 }
