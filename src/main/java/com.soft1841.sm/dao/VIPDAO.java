@@ -1,5 +1,5 @@
 package com.soft1841.sm.dao;
-import com.soft1841.sm.entity.Member;
+import com.soft1841.sm.entity.VIP;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -7,14 +7,14 @@ import java.util.List;
  * 会员DAO接口
  */
 
-public interface MemberDAO {
+public interface VIPDAO {
     /**
      * 增加会员
      * @param member
      * @return
      * @throws SQLException
      */
-    long insertMember(Member member) throws SQLException;
+    long insertMember(VIP member) throws SQLException;
 
     /**
      * 删除会员
@@ -29,7 +29,7 @@ public interface MemberDAO {
      * @return
      * @throws SQLException
      */
-    List<Member> selectMembers() throws SQLException;
+    List<VIP> selectMembers() throws SQLException;
 
     /**
      * 根据id查会员
@@ -37,5 +37,5 @@ public interface MemberDAO {
      * @return
      * @throws SQLException
      */
-    Member getMemberById(long id) throws SQLException;
+    VIP getMemberById(long id) throws SQLException;
 }

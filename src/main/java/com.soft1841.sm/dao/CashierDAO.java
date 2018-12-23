@@ -1,5 +1,6 @@
 package com.soft1841.sm.dao;
 
+import cn.hutool.db.Entity;
 import com.soft1841.sm.entity.Cashier;
 
 import java.sql.SQLException;
@@ -31,7 +32,7 @@ public interface CashierDAO {
      * @return
      * @throws SQLException
      */
-    List<Cashier> selectCashiers()throws SQLException;
+    List <Entity> selectCashiers()throws SQLException;
 
     /**
      * 根据id查收营员
@@ -39,5 +40,5 @@ public interface CashierDAO {
      * @return
      * @throws SQLException
      */
-    Cashier getCashierById(long id) throws SQLException;
+    Entity getCashierById(long id) throws SQLException;
 }

@@ -8,14 +8,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import java.net.URL;
 import java.util.ResourceBundle;
-public class MainController implements Initializable {
+public class BackMainController implements Initializable {
     @FXML
     private StackPane mainContainer;
     public void initialize (URL location, ResourceBundle resources) {
         }
     //显示默认主页数据
-    public void listDefault() throws Exception {
-        switchView("default.fxml");
+    public void listbackmain() throws Exception {
+        switchView("backmain.fxml");
     }
     //显示图书类别数据
     public void listType() throws Exception {
