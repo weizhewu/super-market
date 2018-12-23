@@ -7,9 +7,6 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class BackstageLoginApp extends  Application {
-
-
-
     public void start (Stage primaryStage) throws Exception {
         primaryStage.setTitle("Admin Login");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/login.fxml"));

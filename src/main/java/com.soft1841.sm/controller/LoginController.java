@@ -29,7 +29,7 @@ public class LoginController {
             BorderPane root = fxmlLoader.load();
             Scene scene = new Scene(root);
             scene.getStylesheets().add("/css/style.css");
-            mainStage.setTitle("book manage system");
+            mainStage.setTitle("智行超市收银中心");
             mainStage.setMaximized(true);
             mainStage.setScene(scene);
             mainStage.getIcons().add(new Image("/img/logo.png"));
