@@ -1,4 +1,5 @@
 package com.soft1841.dao;
+import cn.hutool.db.Entity;
 import com.soft1841.entity.VIP;
 
 import java.sql.SQLException;
@@ -30,7 +31,7 @@ public interface VIPDAO {
      * @return
      * @throws SQLException
      */
-    List<VIP> selectVIP() throws SQLException;
+    List<Entity> selectVIP() throws SQLException;
 
     /**
      * 根据id查会员
