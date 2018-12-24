@@ -12,7 +12,7 @@ import java.util.List;
 
 public interface CashierDAO {
     /**
-     * 增加收营员
+     * 增加收银员
      * @param cashier
      * @return
      * @throws SQLException
@@ -20,7 +20,7 @@ public interface CashierDAO {
     long insertCashier(Cashier cashier)throws SQLException;
 
     /**
-     * 删除收营员
+     * 删除收银员
      * @param id
      * @return
      * @throws SQLException
@@ -28,14 +28,14 @@ public interface CashierDAO {
     int deleteById(long id) throws SQLException;
 
     /**
-     * 查询所有收营员
+     * 查询所有收银员
      * @return
      * @throws SQLException
      */
     List <Entity> selectCashiers()throws SQLException;
 
     /**
-     * 根据id查收营员
+     * 根据id查收银员
      * @param id
      * @return
      * @throws SQLException
