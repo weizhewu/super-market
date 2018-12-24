@@ -59,5 +59,16 @@ public class Cashier {
     public Object getCashierName () {
         return null;
     }
+
+    @Override
+    public String toString() {
+        return "Cashier{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", number=" + number +
+                ", password='" + password + '\'' +
+                ", varchar='" + varchar + '\'' +
+                '}';
+    }
 }
 

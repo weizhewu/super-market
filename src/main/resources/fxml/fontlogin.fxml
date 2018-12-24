@@ -24,7 +24,7 @@
             <CheckBox text="记住密码" styleClass="blue-word" AnchorPane.leftAnchor="0"/>
             <Label text="忘记密码?" styleClass="blue-word" AnchorPane.rightAnchor="0" />
         </AnchorPane>
-        <Button   text="登入" styleClass="blue-button-long" onAction="#login"/>
+        <Button  text="登入" styleClass="blue-button-long" onAction="#login"/>
         <HBox spacing="12" alignment="BOTTOM_LEFT">
         </HBox>
         <padding>

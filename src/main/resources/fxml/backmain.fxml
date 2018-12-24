@@ -10,13 +10,25 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
-<AnchorPane xmlns="http://javafx.com/javafx"
+<BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.soft1841.controller.BackMainController"
-            prefHeight="400.0" prefWidth="600.0">
-
-    <ImageView fitWidth="45" fitHeight="45" AnchorPane.topAnchor="15" AnchorPane.rightAnchor="120">
-        <Image url="/img/logo.png"/>
-    </ImageView>
-</AnchorPane>
+            fx:controller="com.soft1841.controller.BackMainController">
+    <top>
+        <AnchorPane>
+            <Label text="智行超市后台管理"/>
+        </AnchorPane>
+    </top>
+    <center>
+        <SplitPane>
+            <AnchorPane>
+                <Accordion>
+                    <panes>
+                        <TitledPane>
+                        </TitledPane>
+                    </panes>
+                </Accordion>
+            </AnchorPane>
+        </SplitPane>
+    </center>
+</BorderPane>
 

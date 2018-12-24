@@ -1,7 +1,7 @@
 package com.soft1841.entity;
 
 public class Goods {
-  private int id;
+    private int id;
     private double type_id;
     private String name;
     private double price;
@@ -71,7 +71,18 @@ public class Goods {
         return discription;
     }
 
-    public void setDiscription(String discription) {
-        this.discription = discription;
+    public void setDiscription(String discription) {this.discription = discription;}
+
+    @Override
+    public String toString() {
+        return "Goods{" +
+                "id=" + id +
+                ", type_id=" + type_id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", picture='" + picture + '\'' +
+                ", stock=" + stock +
+                ", discription='" + discription + '\'' +
+                '}';
     }
 }
