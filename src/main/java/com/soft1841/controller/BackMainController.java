@@ -14,7 +14,7 @@ public class BackMainController implements Initializable {
     public void initialize (URL location, ResourceBundle resources) {
         }
     //显示默认主页数据
-    public void listbackmain() throws Exception {
+   public void listDefault() throws Exception {
         switchView("backmain.fxml");
     }
 
