@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.effect.Reflection?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.soft1841.sm.controller.BackMainController"
+            fx:controller="com.soft1841.controller.FontMainController">
             prefHeight="400.0" prefWidth="600.0">
-
+    <AnchorPane prefHeight="80.0">
+        <Label text="图书后台管理系统" styleClass="font-gray" onMouseClicked="#listDefault"
+               AnchorPane.topAnchor="20" AnchorPane.leftAnchor="10">
+            <effect>
+                <Reflection bottomOpacity="0.2" fraction="0.5" topOffset="-5.0"/>
+            </effect>
+            <font>
+                <Font name="System Bold" size="26.0"/>
+            </font>
+        </Label>
+        <ImageView fitWidth="45" fitHeight="45" AnchorPane.topAnchor="15" AnchorPane.rightAnchor="120">
+            <Image url="/img/logo.png"/>
+        </ImageView>
+    </AnchorPane>
 </AnchorPane>

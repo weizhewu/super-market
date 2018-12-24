@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Button?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.soft1841.controller.FontLoginController"
+            fx:controller="com.soft1841.controller.BackLoginController"
             prefHeight="400.0" prefWidth="600.0">
-    <AnchorPane AnchorPane.topAnchor="0" AnchorPane.leftAnchor="15" AnchorPane.rightAnchor="15" styleClass="login-card">
+
+    <AnchorPane AnchorPane.topAnchor="0" AnchorPane.leftAnchor="15" styleClass="login-card">
         <ImageView>
             <Image url="/img/bei.jpg" requestedHeight="600" requestedWidth="500" />
         </ImageView>
-        <Label text="前台收银员登录"  style="-fx-font-size: 36px" styleClass="font-title" AnchorPane.topAnchor="100" AnchorPane.leftAnchor="130"/>
+        <Label text="后台管理员登录"  style="-fx-font-size: 36px" styleClass="font-title" AnchorPane.topAnchor="100" AnchorPane.leftAnchor="130"/>
         <Label text="智行超市管理系统后台"  style="-fx-font-size: 18px" styleClass="font-gray" AnchorPane.topAnchor="155" AnchorPane.leftAnchor="160"/>
         <VBox prefWidth="330" AnchorPane.topAnchor="190" AnchorPane.leftAnchor="80" spacing="30">
             <!--focusTraversable="false"：让输入框不获取焦点-->
@@ -27,9 +27,7 @@
                 <CheckBox text="记住密码" AnchorPane.leftAnchor="0"/>
                 <Label text="忘记密码?" AnchorPane.rightAnchor="0" styleClass="font-green"/>
             </AnchorPane>
-            <AnchorPane>
-            <Button   text="登入"  AnchorPane.leftAnchor="110" styleClass="login-btn" onAction="#login"/>
-            </AnchorPane>
+            <Button   text="登入" styleClass="login-btn" onAction="#login"/>
             <HBox spacing="12" alignment="BOTTOM_LEFT">
             </HBox>
             <padding>
