@@ -14,8 +14,36 @@ public class BackMainController implements Initializable {
     public void initialize (URL location, ResourceBundle resources) {
         }
     //显示默认主页数据
-   public void listDefault() throws Exception {
-        switchView("backmain.fxml");
+    public void stock() throws Exception {
+        switchView("stock.fxml");
+    }
+
+    public void afterSale() throws Exception{
+        switchView("afterSale.fxml");
+    }
+
+    public void frontDesk() throws Exception{
+        switchView("frontDesk.fxml");
+    }
+
+    public void ListGoods() throws Exception{
+        switchView("goods.fxml");
+    }
+
+    public void ListCashier() throws Exception{
+        switchView("cashier.fxml");
+    }
+
+    public void ListVIP() throws Exception{
+        switchView("VIP.fxml");
+    }
+
+    public void turnover() throws Exception{
+        switchView("turnover.fxml");
+    }
+
+    public void employeeEffectiveness() throws Exception{
+        switchView("employEffect.fxml");
     }
 
     //封装一个切换视图的方法：用来根据fxml文件切换视图内容
@@ -26,6 +54,5 @@ public class BackMainController implements Initializable {
         //读取新的布局文件加入主面板
         AnchorPane anchorPane = new FXMLLoader(getClass().getResource("/fxml/" + fileName)).load();
         mainContainer.getChildren().add(anchorPane);
-
     }
-    }
+}
