@@ -1,33 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<?import javafx.scene.effect.Reflection?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.soft1841.controller.BackMainController">
     <top>
-        <AnchorPane>
-            <Label text="智行超市后台管理"/>
+        <AnchorPane prefHeight="180" styleClass="blue-background">
+            <Label text="智行超市后台管理" styleClass="blue-title"
+                   AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="5"/>
         </AnchorPane>
     </top>
     <center>
-        <SplitPane>
-            <AnchorPane>
-                <Accordion>
-                    <panes>
-                        <TitledPane>
-                        </TitledPane>
-                    </panes>
-                </Accordion>
+        <SplitPane styleClass="blue-background">
+            <AnchorPane maxWidth="200" minWidth="200">
+                <VBox spacing="10" minWidth="200" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0">
+                    <Button text="库存管理" styleClass="blue-button-shout" onAction="#stock"/>
+                    <Button text="售后管理" styleClass="blue-button-shout" onAction="#afterSale"/>
+                    <Button text="前台订单" styleClass="blue-button-shout" onAction="#frontDesk"/>
+                    <Button text="商品管理" styleClass="blue-button-shout" onAction="#ListGoods"/>
+                    <Button text="营业员管理" styleClass="blue-button-shout" onAction="#ListCashier"/>
+                    <Button text="会员管理" styleClass="blue-button-shout" onAction="#ListVIP"/>
+                    <Button text="营业额统计" styleClass="blue-button-shout" onAction="#turnover"/>
+                    <Button text="员工效益统计" styleClass="blue-button-shout" onAction="#employeeEffectiveness"/>
+                </VBox>
             </AnchorPane>
+
+            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED">
+                <StackPane fx:id="backMainContainer" minWidth="1060">
+                    <!--加载外部的fxml文件，显示默认的主体内容-->
+                    <fx:include source="stock.fxml"/>
+                    <padding>
+                        <Insets top="10" left="30" bottom="5" right="10"/>
+                    </padding>
+                </StackPane>
+                <padding>
+                    <Insets top="10"/>
+                </padding>
+            </ScrollPane>
         </SplitPane>
     </center>
 </BorderPane>
