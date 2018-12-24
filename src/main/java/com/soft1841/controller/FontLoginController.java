@@ -7,6 +7,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -26,7 +27,7 @@ public class FontLoginController {
             alert.showAndWait();
             Stage mainStage = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/fontmain.fxml"));
-            BorderPane root = fxmlLoader.load();
+           AnchorPane root = fxmlLoader.load();
             Scene scene = new Scene(root);
             scene.getStylesheets().add("/css/style.css");
             mainStage.setTitle("智行超市收银中心");
