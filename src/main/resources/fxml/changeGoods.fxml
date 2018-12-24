@@ -8,8 +8,8 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.soft1841.controller.TurnoverController"
+            fx:controller="com.soft1841.controller.GoodsController"
             prefHeight="400.0" prefWidth="600.0">
-    <Label text="营业额统计"/>
+    <Label text="换货"/>
 
 </AnchorPane>

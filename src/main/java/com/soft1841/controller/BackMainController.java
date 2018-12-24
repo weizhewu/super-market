@@ -6,21 +6,18 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+
+import javax.jws.Oneway;
 import java.net.URL;
 import java.util.ResourceBundle;
 public class BackMainController implements Initializable {
     @FXML
-    private StackPane mainContainer;
+    private StackPane backMainContainer;
+    @Override
     public void initialize (URL location, ResourceBundle resources) {
-        }
-    //显示默认主页数据
-    public void stock() throws Exception {
-        switchView("stock.fxml");
-    }
 
-    public void afterSale() throws Exception{
-        switchView("afterSale.fxml");
     }
+    //显示默认主页数据
 
     public void frontDesk() throws Exception{
         switchView("frontDesk.fxml");
@@ -30,12 +27,28 @@ public class BackMainController implements Initializable {
         switchView("goods.fxml");
     }
 
+    public void ListType() throws Exception{
+        switchView("type.fxml");
+    }
+
+    public void returnGoods() throws Exception{
+        switchView("returnGoods.fxml");
+    }
+
+    public void changeGoods() throws Exception{
+        switchView("changeGoods.fxml");
+    }
+
     public void ListCashier() throws Exception{
-        switchView("cashier.fxml");
+        switchView("cashiers.fxml");
     }
 
     public void ListVIP() throws Exception{
         switchView("VIP.fxml");
+    }
+
+    public void goodsStatistics() throws Exception{
+        switchView("goodsStatistics.fxml");
     }
 
     public void turnover() throws Exception{
@@ -49,10 +62,10 @@ public class BackMainController implements Initializable {
     //封装一个切换视图的方法：用来根据fxml文件切换视图内容
     private void switchView(String fileName) throws Exception {
         //清除主面板之前内容
-        ObservableList<Node> list = mainContainer.getChildren();
-        mainContainer.getChildren().removeAll(list);
+        ObservableList<Node> list = backMainContainer.getChildren();
+        backMainContainer.getChildren().removeAll(list);
         //读取新的布局文件加入主面板
         AnchorPane anchorPane = new FXMLLoader(getClass().getResource("/fxml/" + fileName)).load();
-        mainContainer.getChildren().add(anchorPane);
+        backMainContainer.getChildren().add(anchorPane);
     }
 }

@@ -13,10 +13,10 @@
             fx:controller="com.soft1841.controller.FontLoginController"
             prefHeight="600.0" prefWidth="800.0" styleClass="blue-background">
     <ImageView AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0">
-        <Image url="/img/bei.jpg" requestedHeight="250" requestedWidth="800" />
+        <Image url="/img/chaoshi.jpg" requestedHeight="600" requestedWidth="800" />
     </ImageView>
-    <Label text="智行超市管理系统后台" styleClass="blue-title" AnchorPane.topAnchor="190" AnchorPane.rightAnchor="5"/>
-    <VBox prefWidth="330" AnchorPane.topAnchor="320" AnchorPane.leftAnchor="230" spacing="20">
+    <Label text="智行超市管理系统前台" styleClass="blue-title" AnchorPane.topAnchor="150" AnchorPane.rightAnchor="5"/>
+    <VBox prefWidth="330" AnchorPane.topAnchor="280" AnchorPane.leftAnchor="230" spacing="20">
         <TextField promptText="账号" styleClass="text-field-small-radius" focusTraversable="false" fx:id="accountField"/>
         <PasswordField promptText="密码"  styleClass="text-field-small-radius" focusTraversable="false" fx:id="passwordField"/>
         <AnchorPane>
