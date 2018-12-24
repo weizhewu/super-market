@@ -1,5 +1,4 @@
 package com.soft1841.controller;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -7,7 +6,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -17,26 +15,27 @@ public class FontLoginController {
     @FXML
     private PasswordField passwordField;
 
-    public void login () throws Exception {
+    public void login()throws Exception {
         String account = accountField.getText().trim();
         String password = passwordField.getText().trim();
-        if ("shouyin".equals(account) && "soft1841".equals(password)) {
+        if ("2316860587".equals(account) && "232623".equals(password)) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("提示");
             alert.setContentText("登录成功!");
             alert.showAndWait();
             Stage mainStage = new Stage();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/fontmain.fxml"));
-           AnchorPane root = fxmlLoader.load();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/backmain.fxml"));
+            BorderPane root = fxmlLoader.load();
             Scene scene = new Scene(root);
             scene.getStylesheets().add("/css/style.css");
-            mainStage.setTitle("智行超市收银中心");
+            mainStage.setTitle("book manage system");
             mainStage.setMaximized(true);
             mainStage.setScene(scene);
             mainStage.getIcons().add(new Image("/img/logo.png"));
             mainStage.show();
             Stage loginStage = (Stage) accountField.getScene().getWindow();
             loginStage.close();
+
         } else {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("提示");

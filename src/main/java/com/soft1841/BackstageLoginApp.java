@@ -7,11 +7,12 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class BackstageLoginApp extends  Application {
+    @Override
     public void start (Stage primaryStage) throws Exception {
         primaryStage.setTitle("智行超市");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/backlogin.fxml"));
         Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root,800,600);
+        Scene scene = new Scene(root,700,600);
         scene.getStylesheets().addAll(
                 "/css/style.css");
         primaryStage.getIcons().add(new Image("/img/logo.png"));
