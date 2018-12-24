@@ -35,4 +35,10 @@ public class CashierDAOImpl implements CashierDAO {
     public Entity getCashierById (long id) throws SQLException {
         return Db.use().queryOne("SELECT * FROM t_cashier WHERE id = ? ", id);
     }
+
+    @Override
+    public List<Entity> selectAllCashierDAOImpl() throws SQLException {
+        return Db.use().query("SELECT * FROM t_cashier ");
+
+    }
 }

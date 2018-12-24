@@ -41,4 +41,6 @@ public interface CashierDAO {
      * @throws SQLException
      */
     Entity getCashierById(long id) throws SQLException;
+
+    List<Entity> selectAllCashierDAOImpl() throws SQLException;
 }

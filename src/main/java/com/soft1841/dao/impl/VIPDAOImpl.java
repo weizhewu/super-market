@@ -10,12 +10,17 @@ import java.util.List;
 public class VIPDAOImpl implements VIPDAO {
     @Override
     public long insertVIP(VIP vip) throws SQLException {
-        return 0;
+        return Db.use().insertForGeneratedKey(
+                Entity.create("t_vip")
+                        .set("vip_name", vip.getName())
+        );
     }
 
     @Override
     public int deleteVIPById(long id) throws SQLException {
-        return 0;
+        return Db.use().del(
+                Entity.create("t_vip").set("id", id)
+        );
     }
 
     @Override
@@ -24,7 +29,7 @@ public class VIPDAOImpl implements VIPDAO {
     }
 
     @Override
-    public VIP getVIPById(long id) throws SQLException {
-        return null;
+    public Entity getVIPById(long id) throws SQLException {
+        return Db.use().queryOne("SELECT * FROM t_vip WHERE id = ? ", id);
     }
 }

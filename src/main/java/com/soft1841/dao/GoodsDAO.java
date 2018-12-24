@@ -1,5 +1,6 @@
 package com.soft1841.dao;
 
+import cn.hutool.db.Entity;
 import com.soft1841.entity.Goods;
 
 import java.sql.SQLException;
@@ -38,7 +39,7 @@ public interface GoodsDAO {
      * @return
      * @throws SQLException
      */
-    List<Goods> selectAllGoods() throws SQLException;
+    List<Entity> selectAllGoods() throws SQLException;
 
     /**
      * 根据id查询商品信息
@@ -46,7 +47,7 @@ public interface GoodsDAO {
      * @return
      * @throws SQLException
      */
-    Goods getDoodById(long id) throws SQLException;
+    Entity getDoodById(long id) throws SQLException;
 
     /**
      * 根据关键词查商品
@@ -54,7 +55,7 @@ public interface GoodsDAO {
      * @return
      * @throws SQLException
      */
-    List<Goods> selectGoodsLike(String keywords) throws SQLException;
+    List<Entity> selectGoodsLike(String keywords) throws SQLException;
 
     /**
      * 根据类别查商品
@@ -62,7 +63,7 @@ public interface GoodsDAO {
      * @return
      * @throws SQLException
      */
-    List<Goods> selectGoodsByTypeId(long typeId) throws SQLException;
+    List<Entity> selectGoodsByTypeId(long typeId) throws SQLException;
 
     /**
      * 根据类别统计商品数量

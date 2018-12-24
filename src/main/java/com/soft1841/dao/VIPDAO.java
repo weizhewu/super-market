@@ -39,5 +39,5 @@ public interface VIPDAO {
      * @return
      * @throws SQLException
      */
-    VIP getVIPById(long id) throws SQLException;
+    Entity getVIPById(long id) throws SQLException;
 }
