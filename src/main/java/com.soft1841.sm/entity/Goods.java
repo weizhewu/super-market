@@ -9,6 +9,16 @@ public class Goods {
     private double stock;
     private String discription;
 
+    public Goods(int id, double type_id, String name, double price, String picture, double stock, String discription) {
+        this.id = id;
+        this.type_id = type_id;
+        this.name = name;
+        this.price = price;
+        this.picture = picture;
+        this.stock = stock;
+        this.discription = discription;
+    }
+
     public int getId() {
         return id;
     }
@@ -63,17 +73,5 @@ public class Goods {
 
     public void setDiscription(String discription) {
         this.discription = discription;
-    }
-
-    public Goods(int id, double type_id, String name, double price, String picture, double stock, String discription) {
-        this.id = id;
-        this.type_id = type_id;
-        this.name = name;
-        this.price = price;
-        this.picture = picture;
-        this.stock = stock;
-        this.discription = discription;
-
-
     }
 }
