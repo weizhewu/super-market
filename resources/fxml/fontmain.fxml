@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.effect.Reflection?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.soft1841.controller.FontMainController">
+    <AnchorPane prefHeight="80.0">
+        <Label text="超市收银系统" styleClass="font-gray" onMouseClicked="#listDefault"
+               AnchorPane.topAnchor="20" AnchorPane.leftAnchor="10"/>
+       <effect>
+                <Reflection bottomOpacity="0.2" fraction="0.5" topOffset="-5.0"/>
+            </effect>
+    </AnchorPane>
+</AnchorPane>
