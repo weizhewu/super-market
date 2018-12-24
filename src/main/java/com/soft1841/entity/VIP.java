@@ -1,7 +1,7 @@
-package com.soft1841.sm.entity;
+package com.soft1841.entity;
 
 public class VIP {
-  private int id;
+    private int id;
     private String number;
     private String name;
     private String place;
@@ -67,6 +67,4 @@ public class VIP {
     public void setIntegral(String integral) {
         this.integral = integral;
     }
-
-
 }

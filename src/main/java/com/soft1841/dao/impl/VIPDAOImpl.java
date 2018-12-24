@@ -1,8 +1,9 @@
 package com.soft1841.dao.impl;
 
+import cn.hutool.db.Db;
+import cn.hutool.db.Entity;
 import com.soft1841.dao.VIPDAO;
 import com.soft1841.entity.VIP;
-
 import java.sql.SQLException;
 import java.util.List;
 
@@ -18,8 +19,8 @@ public class VIPDAOImpl implements VIPDAO {
     }
 
     @Override
-    public List<VIP> selectVIP() throws SQLException {
-        return null;
+    public List<Entity> selectVIP() throws SQLException {
+        return Db.use().query("SELECT * FROM t_vip ");
     }
 
     @Override
