@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 public class BackstageLoginApp extends  Application {
     public void start (Stage primaryStage) throws Exception {
         primaryStage.setTitle("智行超市");
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/backlogin.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root,500,600);
         scene.getStylesheets().addAll(
