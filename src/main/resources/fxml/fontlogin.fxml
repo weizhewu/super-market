@@ -15,7 +15,7 @@
             prefHeight="400.0" prefWidth="600.0">
     <AnchorPane AnchorPane.topAnchor="0" AnchorPane.leftAnchor="15" AnchorPane.rightAnchor="15" styleClass="login-card">
         <ImageView>
-            <Image url="/img/bei.jpg" requestedHeight="600" requestedWidth="500" />
+            <Image url="/img/bei.jpg" requestedHeight="600" requestedWidth="469" />
         </ImageView>
         <Label text="前台收银员登录"  style="-fx-font-size: 36px" styleClass="font-title" AnchorPane.topAnchor="100" AnchorPane.leftAnchor="130"/>
         <Label text="智行超市管理系统后台"  style="-fx-font-size: 18px" styleClass="font-gray" AnchorPane.topAnchor="155" AnchorPane.leftAnchor="160"/>
