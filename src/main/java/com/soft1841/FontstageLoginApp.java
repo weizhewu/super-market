@@ -6,13 +6,16 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-public class FontstageLoginApp extends  Application {
-    @Override
+/**
+ * @ tianzhen
+ * 2018.12.24
+ */
+public class BackstageLoginApp extends  Application {
     public void start (Stage primaryStage) throws Exception {
         primaryStage.setTitle("智行超市");
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/fontlogin.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/backlogin.fxml"));
         Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root,700,600);
+        Scene scene = new Scene(root,500,600);
         scene.getStylesheets().addAll(
                 "/css/style.css");
         primaryStage.getIcons().add(new Image("/img/logo.png"));
@@ -24,4 +27,3 @@ public class FontstageLoginApp extends  Application {
         Application.launch(args);
     }
 }
-
