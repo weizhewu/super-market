@@ -10,6 +10,12 @@ import javafx.scene.layout.StackPane;
 import javax.jws.Oneway;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+/**
+ * 后台主界面控制，主要实现卡片切换式效果
+ * @author 岳凡
+ * 2018.12.24
+ */
 public class BackMainController implements Initializable {
     @FXML
     private StackPane backMainContainer;
