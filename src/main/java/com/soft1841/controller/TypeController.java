@@ -1,4 +1,4 @@
 package com.soft1841.controller;
 
-public class AfterSaleController {
+public class TypeController {
 }

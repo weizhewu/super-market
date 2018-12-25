@@ -8,8 +8,8 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.soft1841.controller.AfterSaleController"
+            fx:controller="com.soft1841.controller.EmployeeEffectController"
             prefHeight="400.0" prefWidth="600.0">
-    <Label text="sssss"/>
+    <Label text="员工效益"/>
 
 </AnchorPane>
