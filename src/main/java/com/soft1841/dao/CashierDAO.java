@@ -7,40 +7,17 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
+ * @tianzhen
+ * 2018.12.24
  * 收营员DAO接口
  */
 
 public interface CashierDAO {
     /**
-     * 增加收银员
-     * @param cashier
+     * 根据工号查询收银员
+     * @param number
      * @return
      * @throws SQLException
      */
-    long insertCashier(Cashier cashier)throws SQLException;
-
-    /**
-     * 删除收银员
-     * @param id
-     * @return
-     * @throws SQLException
-     */
-    int deleteById(long id) throws SQLException;
-
-    /**
-     * 查询所有收银员
-     * @return
-     * @throws SQLException
-     */
-    List <Entity> selectCashiers()throws SQLException;
-
-    /**
-     * 根据id查收银员
-     * @param id
-     * @return
-     * @throws SQLException
-     */
-    Entity getCashierById(long id) throws SQLException;
-
-    List<Entity> selectAllCashierDAOImpl() throws SQLException;
+   Cashier getCashierByNumber(String number)throws SQLException;
 }
