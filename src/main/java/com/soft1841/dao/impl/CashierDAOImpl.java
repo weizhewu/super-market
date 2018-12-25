@@ -6,39 +6,21 @@ import com.soft1841.dao.CashierDAO;
 import com.soft1841.entity.Cashier;
 
 import java.sql.SQLException;
-import java.util.List;
 
+/**
+ * @tianzhen
+ * 2018.12.24
+ */
 public class CashierDAOImpl implements CashierDAO {
 
-
     @Override
-    public long insertCashier (Cashier cashier) throws SQLException {
-        return Db.use().insertForGeneratedKey(
-                Entity.create("t_cashier")
-                        .set("cashier_name", cashier.getCashierName())
-        );
+    public Cashier getCashierByNumber(String number) throws SQLException {
+        Entity entity =  Db.use().queryOne("SELECT * FROM t_cashier WHERE number = ? ",number );
+        return convertSeller(entity);
     }
-
-    @Override
-    public int deleteById (long id) throws SQLException {
-        return Db.use().del(
-                Entity.create("t_cashier").set("id", id)
-        );
-    }
-
-    @Override
-    public List <Entity> selectCashiers () throws SQLException {
-        return Db.use().query("SELECT * FROM t_cashier ");
-    }
-
-    @Override
-    public Entity getCashierById (long id) throws SQLException {
-        return Db.use().queryOne("SELECT * FROM t_cashier WHERE id = ? ", id);
-    }
-
-    @Override
-    public List<Entity> selectAllCashierDAOImpl() throws SQLException {
-        return Db.use().query("SELECT * FROM t_cashier ");
-
+    private Cashier convertSeller(Entity entity){
+        Cashier cashier = new Cashier(entity.getLong("id"),entity.getStr("number"),
+                entity.getStr("name"),entity.getStr("password"),entity.getStr("picture"));
+        return cashier;
     }
 }
