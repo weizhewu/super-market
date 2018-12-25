@@ -1,33 +1,70 @@
+/*蓝色标题*/
 .blue-title{
     -fx-text-fill: rgb(0, 163, 255);
     -fx-font-size: 30px;
     -fx-font-weight: bold;
 }
-
-.white-word{
-    -fx-text-fill: #FFFFFF;
-    -fx-font-size: 18px;
-}
-
+/*字体*/
 .blue-word{
     -fx-text-fill: rgb(0, 163, 255);
     -fx-font-size: 14px;
 }
+.black-word{
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+}
 
+.zongji-word{
+    -fx-text-fill: #000000;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.zongji-textfield-word{
+    -fx-text-fill: #000000;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.white-word{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+}
+/*蓝色背景*/
 .blue-background{
     -fx-background-color: rgb(192, 229, 242);
 }
-
+/*橙色按钮*/
 .orange-button{
     -fx-background-color: rgb(246, 149, 129);
     -fx-background-radius: 40px;
     -fx-text-fill: #FFFFFF;
+    -fx-min-width: 50px;
+    -fx-min-height: 20px;
 }
-
+.print-button{
+    -fx-background-color: rgb(246, 149, 129);
+    -fx-background-radius: 20px;
+    -fx-text-fill: #FFFFFF;
+    -fx-pref-width: 80px;
+    -fx-pref-height: 80px;
+}
+/*搜索按钮*/
+.search-button{
+    -fx-background-radius: 40px;
+    -fx-background-color: rgb(238, 238, 238);
+    -fx-text-fill:rgb(95, 99, 104);
+    -fx-pref-height: 30px;
+    -fx-pref-width: 50px;
+}
+/*蓝色按钮*/
 .blue-button-return{
     -fx-background-color: rgb(0, 163, 255);
-    -fx-background-radius: 10px;
+    -fx-background-radius: 20px;
     -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-min-width: 50px;
+    -fx-min-height: 20px;
 }
 
 .blue-button-long{
@@ -45,17 +82,31 @@
     -fx-pref-height: 20px;
     -fx-text-alignment: center;
 }
+
+.blue-large-button{
+    -fx-border-color: rgb(148, 199, 233);
+    -fx-border-width: 3px;
+    -fx-border-radius: 10px;
+    -fx-background-color: rgb(191, 226, 233);
+    -fx-background-radius: 10px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 46px;
+    -fx-font-weight: bold;
+    -fx-pref-height: 150px;
+    -fx-pref-width: 320px;
+}
+
+/*两种输入框*/
 .text-field-small-radius{
     -fx-background-radius: 5px;
-    -fx-pref-height: 10px;
+    -fx-pref-height: 20px;
     -fx-pref-width: 200px;
 }
-
 .text-field-large-radius{
     -fx-background-radius: 20px;
-    -fx-pref-height: 16px;
-    -fx-pref-width: 200px;
+    -fx-pref-height: 30px;
+    -fx-pref-width: 250px;
+    -fx-text-fill: rgb(233, 233, 233);
 }
-
 
 
