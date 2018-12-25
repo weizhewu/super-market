@@ -1,13 +1,13 @@
 package com.soft1841.entity;
 
 public class Cashier {
-    private String id;
-    private  String name;
-    private Double number;
-    private  String password;
-    private  String varchar;
+    private Long id;
+    private String name;
+    private String number;
+    private String password;
+    private String varchar;
 
-    public Cashier (String id, String name, Double number, String password, String varchar) {
+    public Cashier (Long id, String name, String number, String password, String varchar) {
         this.id = id;
         this.name = name;
         this.number = number;
@@ -15,11 +15,11 @@ public class Cashier {
         this.varchar = varchar;
     }
 
-    public String getId () {
+    public Long getId () {
         return id;
     }
 
-    public void setId (String id) {
+    public void setId (Long id) {
         this.id = id;
     }
 
@@ -31,11 +31,11 @@ public class Cashier {
         this.name = name;
     }
 
-    public Double getNumber () {
+    public String getNumber () {
         return number;
     }
 
-    public void setNumber (Double number) {
+    public void setNumber (String number) {
         this.number = number;
     }
 
@@ -54,21 +54,4 @@ public class Cashier {
     public void setVarchar (String varchar) {
         this.varchar = varchar;
     }
-
-
-    public Object getCashierName () {
-        return null;
-    }
-
-    @Override
-    public String toString() {
-        return "Cashier{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", number=" + number +
-                ", password='" + password + '\'' +
-                ", varchar='" + varchar + '\'' +
-                '}';
-    }
 }
-

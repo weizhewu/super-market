@@ -38,7 +38,7 @@ public class FontLoginController {
             alert.showAndWait();
         }
         Stage mainStage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/backmain.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/fontmain.fxml"));
         AnchorPane root = fxmlLoader.load();
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/css/style.css");

@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
-<?import javafx.scene.effect.Reflection?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.soft1841.controller.FontMainController">
-    <AnchorPane prefHeight="80.0">
-        <Label text="智行超市收银" styleClass="font-gray" onMouseClicked="#listDefault"
-               AnchorPane.topAnchor="20" AnchorPane.leftAnchor="10">
-            <effect>
-                <Reflection bottomOpacity="0.2" fraction="0.5" topOffset="-5.0"/>
-            </effect>
-            <font>
-                <Font name="System Bold" size="26.0"/>
-            </font>
-        </Label>
-        <ImageView fitWidth="45" fitHeight="45" AnchorPane.topAnchor="15" AnchorPane.rightAnchor="120">
+    <ImageView AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0">
+        <Image url="/img/fontMain.png"/>
+    </ImageView>
+    <Label text="智行超市前台管理" styleClass="blue-title"/>
+    <HBox AnchorPane.leftAnchor="200" AnchorPane.topAnchor="200">
+        <Button text="前台收银"/>
+        <Button text="售后服务"/>
+    </HBox>
+    <HBox AnchorPane.leftAnchor="200" AnchorPane.topAnchor="250" >
+        <Button text="流水查询"/>
+        <Button text="个人中心"/>
+    </HBox>
+    <HBox>
+        <ImageView>
             <Image url="/img/logo.png"/>
         </ImageView>
-    </AnchorPane>
+        <Label text="xi"/>
+    </HBox>
+    <Button text="返回"/>
 </AnchorPane>
