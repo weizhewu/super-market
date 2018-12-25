@@ -16,7 +16,7 @@ public interface GoodsDAO {
      * @return
      * @throws SQLException
      */
-    Long insertGoods(Goods goods) throws SQLException;
+    List<Object> insertGoods(Goods goods) throws SQLException;
 
     /**
      * 根据id删除商品
@@ -27,7 +27,7 @@ public interface GoodsDAO {
     int deleteGoodsById(long id) throws SQLException;
 
     /**
-     * 跟新商品信息
+     * 改变商品信息
      * @param goods
      * @return
      * @throws SQLException
@@ -47,7 +47,7 @@ public interface GoodsDAO {
      * @return
      * @throws SQLException
      */
-    Entity getDoodById(long id) throws SQLException;
+    Entity getGoodById(long id) throws SQLException;
 
     /**
      * 根据关键词查商品

@@ -14,7 +14,7 @@ import java.sql.SQLException;
 public class CashierDAOImpl implements CashierDAO {
 
     @Override
-    public Cashier getCashierByNumber(String number) throws SQLException {
+    public Cashier getCashierByNumber(String number) throws SQLException{
         Entity entity =  Db.use().queryOne("SELECT * FROM t_cashier WHERE number = ? ",number );
         return convertSeller(entity);
     }

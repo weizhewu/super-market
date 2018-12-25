@@ -10,13 +10,11 @@ public class Ticket {
     private final SimpleLongProperty ticketId = new SimpleLongProperty();
     private final SimpleLongProperty cashierId = new SimpleLongProperty();
     private final SimpleLongProperty vipId = new SimpleLongProperty();
-    private final SimpleDateFormat date = new SimpleDateFormat();
     private final SimpleDoubleProperty count = new SimpleDoubleProperty();
+    private final SimpleLongProperty barcode = new SimpleLongProperty();
+    private final SimpleDoubleProperty number = new SimpleDoubleProperty();
 
     public Ticket() {
-    }
-
-    public Ticket(long ticketId, long cashierId, long vipId, DateFormat date, double count){
     }
 
     public long getTicketId() {
@@ -55,10 +53,6 @@ public class Ticket {
         this.vipId.set(vipId);
     }
 
-    public SimpleDateFormat getDate() {
-        return date;
-    }
-
     public double getCount() {
         return count.get();
     }
@@ -71,14 +65,39 @@ public class Ticket {
         this.count.set(count);
     }
 
+    public long getBarcode() {
+        return barcode.get();
+    }
+
+    public SimpleLongProperty barcodeProperty() {
+        return barcode;
+    }
+
+    public void setBarcode(long barcode) {
+        this.barcode.set(barcode);
+    }
+
+    public double getNumber() {
+        return number.get();
+    }
+
+    public SimpleDoubleProperty numberProperty() {
+        return number;
+    }
+
+    public void setNumber(double number) {
+        this.number.set(number);
+    }
+
     @Override
     public String toString() {
         return "Ticket{" +
                 "ticketId=" + ticketId +
                 ", cashierId=" + cashierId +
                 ", vipId=" + vipId +
-                ", date=" + date +
                 ", count=" + count +
+                ", barcode=" + barcode +
+                ", number=" + number +
                 '}';
     }
 }

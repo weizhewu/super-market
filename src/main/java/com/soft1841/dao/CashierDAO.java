@@ -19,5 +19,5 @@ public interface CashierDAO {
      * @return
      * @throws SQLException
      */
-   Cashier getCashierByNumber(String number)throws SQLException;
+   Cashier getCashierByNumber(String number) throws SQLException;
 }

@@ -7,6 +7,14 @@ import java.util.List;
 
 public interface TicketDAO {
     /**
+     * 删除小票
+     * @param id
+     * @return
+     * @throws SQLException
+     */
+    int deleteTicketById(long id) throws SQLException;
+
+    /**
      * 增加小票
      * @param ticket
      * @return
@@ -43,7 +51,7 @@ public interface TicketDAO {
      * @return
      * @throws SQLException
      */
-    Ticket getTicketByCashierId(long CashierId) throws SQLException;
+    List<Entity> getTicketByCashierId(long CashierId) throws SQLException;
 
     /**
      * 根据会员id查小票
@@ -51,5 +59,5 @@ public interface TicketDAO {
      * @return
      * @throws SQLException
      */
-    Ticket getTicketByMemberId(long MemberId) throws SQLException;
+    List<Entity> getTicketByMemberId(long MemberId) throws SQLException;
 }
