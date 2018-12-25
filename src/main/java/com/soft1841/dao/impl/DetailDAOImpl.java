@@ -26,4 +26,5 @@ public class DetailDAOImpl implements DetailDAO {
     public Detail getDetailByDate(String date) throws SQLException {
         return null;
     }
+
 }

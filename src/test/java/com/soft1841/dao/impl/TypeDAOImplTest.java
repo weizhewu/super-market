@@ -4,14 +4,13 @@ import org.junit.Test;
 
 import java.sql.SQLException;
 
+import static org.junit.Assert.*;
 
-public class CashierDAOImplTest {
+public class TypeDAOImplTest {
     //删除测试
     @Test
     public void deleteTypeById() throws SQLException {
-        new CashierDAOImpl().deleteById(18);
+        new TypeDAOImpl().deleteType(10);
     }
-
-
 
 }
