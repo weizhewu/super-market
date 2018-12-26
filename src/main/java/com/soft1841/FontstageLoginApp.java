@@ -17,7 +17,7 @@ public class FontstageLoginApp extends Application {
         primaryStage.setTitle("智行超市");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/fontlogin.fxml"));
         Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root,500,600);
+        Scene scene = new Scene(root,800,600);
         scene.getStylesheets().addAll(
                 "/css/style.css");
         primaryStage.getIcons().add(new Image("/img/logo.png"));
@@ -28,6 +28,3 @@ public class FontstageLoginApp extends Application {
         Application.launch(args);
     }
 }
-
-
-
