@@ -19,6 +19,10 @@ public class Goods {
         this.discription = discription;
     }
 
+    public Goods() {
+
+    }
+
     public int getId() {
         return id;
     }

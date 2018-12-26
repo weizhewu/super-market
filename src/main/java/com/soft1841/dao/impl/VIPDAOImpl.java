@@ -13,7 +13,7 @@ public class VIPDAOImpl implements VIPDAO {
     public long insertVIP(VIP vip) throws SQLException {
         return Db.use().insertForGeneratedKey(
                 Entity.create("t_vip")
-                        .set("vip_name", vip.getName())
+                        .set("name", vip.getName())
         );
     }
 

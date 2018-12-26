@@ -11,50 +11,67 @@ import javafx.beans.property.SimpleStringProperty;
 public class Detail {
     private final SimpleLongProperty DetailId = new SimpleLongProperty();
     private final SimpleLongProperty TicketId = new SimpleLongProperty();
-    private final SimpleLongProperty GoodsId = new SimpleLongProperty();
-    private final SimpleDoubleProperty Number = new SimpleDoubleProperty();
+    private final SimpleLongProperty BarCode = new SimpleLongProperty();
+    private final SimpleDoubleProperty GoodsNumber = new SimpleDoubleProperty();
 
     public Detail() {
     }
 
-    public Detail(long detailId,long ticketId,long goodsId,Double number){
-        setDetailId(detailId);
-        setTicketId(ticketId);
-        setGoodsId(goodsId);
-        setNumber(number);
+    public long getDetailId() {
+        return DetailId.get();
     }
 
-    public long getDetailId() { return DetailId.get(); }
+    public SimpleLongProperty detailIdProperty() {
+        return DetailId;
+    }
 
-    public SimpleLongProperty detailIdProperty() { return DetailId;}
+    public void setDetailId(long detailId) {
+        this.DetailId.set(detailId);
+    }
 
-    public void setDetailId(long detailId) {this.DetailId.set(detailId); }
+    public long getTicketId() {
+        return TicketId.get();
+    }
 
-    public long getTicketId() {return TicketId.get(); }
+    public SimpleLongProperty ticketIdProperty() {
+        return TicketId;
+    }
 
-    public SimpleLongProperty ticketIdProperty() {return TicketId; }
+    public void setTicketId(long ticketId) {
+        this.TicketId.set(ticketId);
+    }
 
-    public void setTicketId(long ticketId) {this.TicketId.set(ticketId);}
+    public long getBarCode() {
+        return BarCode.get();
+    }
 
-    public long getGoodsId() {return GoodsId.get();}
+    public SimpleLongProperty barCodeProperty() {
+        return BarCode;
+    }
 
-    public SimpleLongProperty goodsIdProperty() {return GoodsId; }
+    public void setBarCode(long barCode) {
+        this.BarCode.set(barCode);
+    }
 
-    public void setGoodsId(long goodsId) {this.GoodsId.set(goodsId);}
+    public double getGoodsNumber() {
+        return GoodsNumber.get();
+    }
 
-    public double getNumber() {return Number.get();}
+    public SimpleDoubleProperty goodsNumberProperty() {
+        return GoodsNumber;
+    }
 
-    public SimpleDoubleProperty numberProperty() {return Number; }
-
-    public void setNumber(double number) {this.Number.set(number);}
+    public void setGoodsNumber(double goodsNumber) {
+        this.GoodsNumber.set(goodsNumber);
+    }
 
     @Override
     public String toString() {
         return "Detail{" +
                 "DetailId=" + DetailId +
                 ", TicketId=" + TicketId +
-                ", GoodsId=" + GoodsId +
-                ", Number=" + Number +
+                ", BarCode=" + BarCode +
+                ", GoodsNumber=" + GoodsNumber +
                 '}';
     }
 }

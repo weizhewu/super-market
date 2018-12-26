@@ -1,5 +1,6 @@
 package com.soft1841.dao;
 
+import cn.hutool.db.Entity;
 import com.soft1841.entity.Detail;
 
 import java.sql.SQLException;
@@ -12,14 +13,14 @@ public interface DetailDAO {
      * @return
      * @throws SQLException
      */
-    Long insertDetail(Detail detail) throws SQLException;
+    List<Object> insertDetail(Detail detail) throws SQLException;
 
     /**
      * 查所有明细
      * @return
      * @throws SQLException
      */
-    List<Detail> selectAllDetail() throws SQLException;
+    List<Entity> selectAllDetail() throws SQLException;
 
     /**
      * 根据id查明细
@@ -27,7 +28,7 @@ public interface DetailDAO {
      * @return
      * @throws SQLException
      */
-    Detail getDetailById(long id) throws SQLException;
+    Entity getDetailById(long id) throws SQLException;
 
     /**
      * 根据日期查明细
@@ -35,5 +36,5 @@ public interface DetailDAO {
      * @return
      * @throws SQLException
      */
-    Detail getDetailByDate(String date) throws SQLException;
+    Entity getDetailByDate(int date) throws SQLException;
 }
