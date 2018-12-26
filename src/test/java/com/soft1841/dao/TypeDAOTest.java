@@ -32,7 +32,7 @@ public class TypeDAOTest {
     @Test
     public void selectAllTypes()throws SQLException{
         List<Entity> typesList = typeDAO.selectAllTypes();
-        typesList.forEach((entity -> System.out.println(entity.getStr("name"))));
+        System.out.println(typesList);
     }
 
 //    根据id查询测试

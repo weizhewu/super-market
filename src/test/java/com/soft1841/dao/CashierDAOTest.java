@@ -17,4 +17,5 @@ public class CashierDAOTest {
         Cashier entity = cashierDAO.getCashierByNumber("2624001");
         System.out.println(entity);
     }
+
 }

@@ -40,7 +40,7 @@ public class GoodsDAOTest {
     @Test
     public void selectAllGoods() throws SQLException {
         List<Entity> goodsList = goodsDAO.selectAllGoods();
-        goodsList.forEach((entity -> System.out.println(entity.getStr("name"))));
+        System.out.println(goodsList);
     }
 
 //    修改测试

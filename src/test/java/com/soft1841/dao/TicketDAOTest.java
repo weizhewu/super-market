@@ -35,7 +35,7 @@ public class TicketDAOTest {
     @Test
     public void selectAllTicket() throws SQLException {
     List<Entity> ticketList = ticketDAO.selectAllTicket();
-    ticketList.forEach((entity -> System.out.println(entity.getStr("id"))));
+        System.out.println(ticketList);
 }
 //    根据id查询测试
     @Test
@@ -44,12 +44,13 @@ public class TicketDAOTest {
         System.out.println(entity);
     }
 
-//    不能根据日期查询测试
-//    public void getTicketByDate()throws SQLException{
-//        Entity entity = ticketDAO.getTicketByDate(2018-11-11);
-//        System.out.println(entity);
+//   根据日期查询测试
+    @Test
+    public void getTicketByDate()throws SQLException{
+        Entity entity = ticketDAO.getTicketByDate(2018-12-05);
+        System.out.println(entity);
 
-//    }
+    }
 //    根据收银员id查询测试
     @Test
     public void getTicketByCashierId() throws SQLException{

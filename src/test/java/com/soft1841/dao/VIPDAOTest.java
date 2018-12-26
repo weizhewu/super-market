@@ -30,7 +30,7 @@ public class VIPDAOTest {
     @Test
     public void selectVIP() throws SQLException{
         List<Entity> vipList = vipdao.selectVIP();
-        vipList.forEach((entity -> System.out.println(entity.getStr("name"))));
+        System.out.println(vipList);
     }
 
 //    根据id查询测试

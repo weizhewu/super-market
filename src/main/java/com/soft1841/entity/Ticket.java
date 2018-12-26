@@ -13,6 +13,7 @@ public class Ticket {
     private final SimpleDoubleProperty count = new SimpleDoubleProperty();
     private final SimpleLongProperty barcode = new SimpleLongProperty();
     private final SimpleDoubleProperty number = new SimpleDoubleProperty();
+    private final SimpleDateFormat date = new SimpleDateFormat();
 
     public Ticket() {
     }
@@ -89,6 +90,10 @@ public class Ticket {
         this.number.set(number);
     }
 
+    public SimpleDateFormat getDate() {
+        return date;
+    }
+
     @Override
     public String toString() {
         return "Ticket{" +
@@ -98,6 +103,7 @@ public class Ticket {
                 ", count=" + count +
                 ", barcode=" + barcode +
                 ", number=" + number +
+                ", date=" + date +
                 '}';
     }
 }

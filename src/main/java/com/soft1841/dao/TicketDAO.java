@@ -2,6 +2,7 @@ package com.soft1841.dao;
 import cn.hutool.db.Entity;
 import com.soft1841.entity.Ticket;
 
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -43,7 +44,9 @@ public interface TicketDAO {
      * @return
      * @throws SQLException
      */
-    Entity getTicketByDate(String date) throws SQLException;
+    Entity getTicketByDate(Date date) throws SQLException;
+
+    Entity getTicketByDate(int date) throws SQLException;
 
     /**
      * 根据收银员id查小票

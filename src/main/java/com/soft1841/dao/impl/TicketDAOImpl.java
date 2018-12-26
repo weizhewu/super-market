@@ -5,6 +5,7 @@ import cn.hutool.db.Entity;
 import com.soft1841.dao.TicketDAO;
 import com.soft1841.entity.Ticket;
 
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -41,8 +42,13 @@ public class TicketDAOImpl implements TicketDAO {
     }
 
     @Override
-    public Entity getTicketByDate(String date) throws SQLException {
-        return Db.use().queryOne("SELECT * FROM t_cashier WHERE date= ? ", date);
+    public Entity getTicketByDate(Date date) throws SQLException {
+        return (Entity) Db.use().query("SELECT * FROM t_ticket WHERE date = ?",date);
+    }
+
+    @Override
+    public Entity getTicketByDate(int date) throws SQLException {
+        return Db.use().queryOne("SELECT * FROM t_ticket WHERE date= ? ", date);
     }
 
     @Override
