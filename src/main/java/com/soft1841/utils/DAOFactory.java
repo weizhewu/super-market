@@ -20,10 +20,6 @@ public class DAOFactory {
     public static VIPDAO getVIPDAOInstance() {
         return new VIPDAOImpl();
     }
-    public static DetailDAO getDetailDAOInstance() {
-        return new DetailDAOImpl();
-    }
-
 
 
 }

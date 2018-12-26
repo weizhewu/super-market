@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <?import javafx.geometry.Insets?>
+<!--后台主界面布局-->
+<!--@author 岳凡-->
+<!--2018.12.24-->
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.soft1841.controller.BackMainController">
@@ -14,8 +15,10 @@
         </AnchorPane>
     </top>
     <center>
+        <!--分割面板-->
         <SplitPane styleClass="blue-background">
             <AnchorPane maxWidth="200" minWidth="200">
+                <!--风琴面板-->
                 <Accordion>
                     <panes>
                         <TitledPane alignment="CENTER" text="库存管理">
@@ -51,6 +54,7 @@
                 </Accordion>
             </AnchorPane>
 
+            <!--右侧的主体内容部分，采用StackPane实现一种卡片式切换效果-->
             <ScrollPane fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED">
                 <StackPane fx:id="backMainContainer" minWidth="1060">
                     <!--加载外部的fxml文件，显示默认的主体内容-->
@@ -66,4 +70,3 @@
         </SplitPane>
     </center>
 </BorderPane>
-
