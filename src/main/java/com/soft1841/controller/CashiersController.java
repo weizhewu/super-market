@@ -17,6 +17,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
@@ -31,22 +32,59 @@ public class CashiersController implements Initializable {
     List<Entity> cashierList = null;
     private CashierDAO cashierDAO = DAOFactory.getCashierDAOInstance();
     private ObservableList<Cashier> cashiersData = FXCollections.observableArrayList();
+    private TableColumn<Cashier,Cashier> editCol = new TableColumn<>("操作");
     private TableColumn<Cashier,Cashier> delCol = new TableColumn<>("操作");
+    private AbstractButton keywordsField;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-     //   initTable();
+        initTable();
     }
 
     private void initTable() {
-       // cashierTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        cashierTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         try {
             cashierList = cashierDAO.selectAllCashiers();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        showCashierData(cashierList);
+       // showCashierData(cashierList);
+        //编辑列的相关设置
+        editCol.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
+        editCol.setCellFactory(param -> new TableCell<Cashier, Cashier>() {
+            //通过ComponentUtil工具类的静态方法，传入按钮文字和样式，获得一个按钮对象
+            private final Button editButton = ComponentUtil.getButton("编辑", "blue-word");
+            @Override
+            protected void updateItem(Cashier cashier, boolean empty) {
+                super.updateItem(cashier, empty);
+                if (cashier == null) {
+                    setGraphic(null);
+                    return;
+                }
+                setGraphic(editButton);
+                //点击编辑按钮，弹出窗口，输入需要修改的收银员工号
+                editButton.setOnAction(event -> {
+                    TextInputDialog dialog = new TextInputDialog("请输入工号");
+                    dialog.setTitle("收银员修改界面");
+
+                    dialog.setContentText("请输入新的工号:");
+                    Optional<String> result = dialog.showAndWait();
+                    //确认输入了内容，避免NPE
+                    if (result.isPresent()) {
+                        //获取输入的新价格并转化成Double数据
+                        String numberString = result.get();
+                        cashier.setNumber(Double.parseDouble(numberString));
+                        //更新收银员信息
+                        cashierDAO.updateCashier(cashier);
+                    }
+                });
+            }
+        });
+        //将编辑列加入收银员表格
+        cashierTable.getColumns().add(editCol);
+
+
         //删除列的相关设置
         delCol.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
         delCol.setCellFactory(param -> new TableCell<Cashier,Cashier>() {
@@ -76,17 +114,19 @@ public class CashiersController implements Initializable {
         cashierTable.getColumns().add(delCol);
     }
 
-    private void showCashierData(List<Entity> cashierList) {
-        for (Entity entity : cashierList) {
-            Cashier cashier = new Cashier();
-            cashier.setId(entity.getInt("id"));
-            cashier.setName(entity.getStr("name"));
-            cashier.setNumber(entity.getStr("number"));
-            cashier.setPassword(entity.getStr("password"));
-            cashierData.add(cashier);
-        }
-        cashierTable.setItems(cashierData);
-    }
+//    private void showCashierData(List<Entity> cashierList) {
+//        for (Entity entity : cashierList) {
+//            Cashier cashier = new Cashier();
+//            cashier.setId(entity.getInt("id"));
+//            cashier.setName(entity.getStr("name"));
+//            cashier.setNumber(entity.getStr("number"));
+//            cashier.setPassword(entity.getStr("password"));
+//            cashierData.add(cashier);
+//        }
+//        cashierTable.setItems(cashierData);
+//
+//    }
+
 
     //弹出新增收银员界面方法
     public void newcashierStage() throws Exception {
@@ -102,13 +142,23 @@ public class CashiersController implements Initializable {
         addCashierStage.show();
     }
 
-
-    public ObservableList<Cashier> getCashierData() {
-        return cashierData;
+    public TableColumn<Cashier, Cashier> getEditCol() {
+        return editCol;
     }
 
-    public void setCashierData(ObservableList<Cashier> cashierData) {
-        this.cashierData = cashierData;
+    public void setEditCol(TableColumn<Cashier, Cashier> editCol) {
+        this.editCol = editCol;
     }
+//
+//    public void search() {
+//        cashierTable.getItems().removeAll(cashiersData);
+//        String keywords = keywordsField.getText().trim();
+//        try {
+//            cashierList = cashierDAO.selectcashiersLike(keywords);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        showCashierData(cashierList);
+//    }
 }
 
