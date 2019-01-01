@@ -6,10 +6,40 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.soft1841.controller.TurnoverController"
-            prefHeight="400.0" prefWidth="600.0">
-    <Label text="营业额统计"/>
+            prefHeight="800.0" prefWidth="600.0">
+    <GridPane>
+        <AnchorPane GridPane.rowIndex="0" GridPane.columnIndex="1">
+
+            <ImageView GridPane.rowIndex="0" GridPane.columnIndex="1" AnchorPane.leftAnchor="50">
+                <Image url="/img/a.jpg"/>
+            </ImageView>
+                <VBox spacing="10" GridPane.rowIndex="0" GridPane.columnIndex="1" AnchorPane.leftAnchor="150" >
+                   <Label text="商品类别" styleClass="zi,green" />
+                      <Button text="服装类" styleClass="zi,green"/>
+                      <Button text="食品类" styleClass="zi,green"/>
+                      <Button text="饮料类" styleClass="zi,green"/>
+                      <Button text="日用百货类" styleClass="zi,green"/>
+                      <Button text="酒类" styleClass="zi,green"/>
+                      <Button text="电器小家电类" styleClass="zi,green"/>
+                      <Button text="米面类" styleClass="zi,green"/>
+                      <Button text="水果类" styleClass="zi,green"/>
+                      <Button text="蔬菜类" styleClass="zi,green"/>
+                </VBox>
+        </AnchorPane>
+            <ImageView GridPane.rowIndex="0" GridPane.columnIndex="0">
+                <Image url="/img/e.jpg"/>
+            </ImageView>
+    </GridPane>
+    <Label text="最佳收银员" styleClass="a" AnchorPane.leftAnchor="260" AnchorPane.topAnchor="600"/>
+    <HBox spacing="20" AnchorPane.leftAnchor="180" AnchorPane.topAnchor="700">
+        <Label text="NO.1:李梦怜" styleClass="zi"/>
+        <Label text="NO.2:李利如" styleClass="zi"/>
+        <Label text="NO.3:吴鹏飞" styleClass="zi"/>
+    </HBox>
 
 </AnchorPane>
